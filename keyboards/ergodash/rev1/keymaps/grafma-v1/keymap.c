@@ -22,6 +22,7 @@ enum custom_keycodes {
 #define SFTSPC MT(MOD_LSFT, KC_SPC)
 #define ALTRGHT LALT(KC_RGHT)
 #define ALTLEFT LALT(KC_LEFT)
+#define ALTTAB LALT(KC_TAB)
 #define VW_RGHT LCTL(LGUI(KC_RGHT))
 #define VW_LEFT LCTL(LGUI(KC_LEFT))
 
@@ -51,9 +52,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,----------------------------------------------------------------------------------------------------------------------.
    * | ESC  |   1  |   2  |   3  |   4  |   5  |   [  |                    |   ]  |   6  |   7  |   8  |   9  |   0  |Pscree|
    * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
-   * | Tab   |   Q  |   W  |   E  |   R  |   T  |   -  |                    |   =  |   Y  |   U  |   I  |   O  |   P  |  \   |
+   * | Tab  |   Q  |   W  |   E  |   R  |   T  |   -  |                    |   =  |   Y  |   U  |   I  |   O  |   P  |  \   |
    * |------+------+------+------+------+------+------+--------------------+------+------+------+------+------+------+------|
-   * |   ` |   A  |   S  |   D  |   F  |   G  |  Del |                    | Bksp |   H  |   J  |   K  |   L  |   ;  |  "   |
+   * |   `  |   A  |   S  |   D  |   F  |   G  |  Del |                    | Bksp |   H  |   J  |   K  |   L  |   ;  |  "   |
    * |------+------+------+------+------+------+---------------------------+------+------+------+------+------+------+------|
    * | Shift|   Z  |   X  |   C  |   V  |   B  | Space|                    | Enter|   N  |   M  |   ,  |   .  |   /  | Shift|
    * |-------------+------+------+------+------+------+------+------+------+------+------+------+------+------+-------------|
@@ -133,12 +134,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
   [_SP1ENT] = LAYOUT(
-    _______, _______, _______, _______, _______, _______,_______,                       _______, _______, _______, _______, _______, _______, _______, \
-    _______, RESET  , RGB_TOG, RGB_MOD, RGB_HUD, RGB_HUI,_______,                       _______, RGB_SAD, RGB_SAI, RGB_VAD, RGB_VAI, _______, _______, \
-    _______, _______, BL_TOGG, BL_BRTG, BL_INC , BL_DEC ,_______,                       _______, ALTLEFT, _______, _______, ALTRGHT, _______, _______, \
-    _______, _______, _______, _______, _______, _______,_______,                       _______, _______, _______, _______, _______, _______, _______, \
-    _______, _______, _______, _______,          _______,_______,ALTRGHT,       _______,_______, _______,          _______, _______, _______, _______  \
+    KC_ESC,  KC_1,    JU_2,    KC_3,    KC_4,    KC_5,    JU_LBRC,                      JU_RBRC, JU_6,    JU_7,    JU_8,    JU_9,    JU_0,    JU_CAPS, \
+    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    JU_MINS,                      JU_EQL , KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    JU_BSLS, \
+    KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    JU_GRV ,                      KC_BSPC, ALTLEFT, KC_J,    KC_K,    ALTRGHT, JU_SCLN, JU_QUOT, \
+    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LCTL,                      KC_DEL , KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, \
+    KC_LCTL, KC_LGUI, KC_LALT, KC_LCTL,          LOWER,   ALTTAB ,ALTTAB ,      SP1ENT ,KC_BSPC, RAISE,            KC_LGUI, KC_LEFT, KC_UP,   KC_RGHT  \
   ),
+
 };
 
 
