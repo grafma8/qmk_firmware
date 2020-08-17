@@ -21,9 +21,9 @@ enum custom_keycodes {
 #define CTLESC MT(MOD_LCTL, KC_ESC)
 #define SFTSPC MT(MOD_LSFT, KC_SPC)
 #define ALTRGHT LALT(KC_RGHT)
-#define ALTLFT LALT(KC_LEFT)
+#define ALTLEFT LALT(KC_LEFT)
 #define VW_RGHT LCTL(LGUI(KC_RGHT))
-#define VW_LFT LCTL(LGUI(KC_LEFT))
+#define VW_LEFT LCTL(LGUI(KC_LEFT))
 
 /* jtu keycodes
   JU_2
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    JU_MINS,                        JU_EQL , KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    JU_BSLS, \
     KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    JU_GRV ,                        KC_BSPC, KC_H,    KC_J,    KC_K,    KC_L,    JU_SCLN, JU_QUOT, \
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LCTL,                        KC_DEL , KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT, \
-    KC_LCTL, KC_LGUI, KC_LALT, KC_LCTL,          LOWER,   SFTSPC , SFTSPC,       SP1ENT , KC_BSPC ,RAISE,            KC_LGUI, KC_LEFT, KC_UP,   KC_RGHT  \
+    KC_LCTL, KC_LGUI, KC_LALT, KC_LCTL,          LOWER,   SFTSPC , SFTSPC,        SP1ENT, KC_BSPC ,RAISE,            KC_LGUI, KC_LEFT, KC_UP,   KC_RGHT  \
   ),
 
 
@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_ADJUST] = LAYOUT(
     _______, _______, _______, _______, _______, _______,KC_MPRV,                       KC_MNXT, KC_MPLY, _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_PSCR, \
     _______, RESET  , RGB_TOG, RGB_MOD, RGB_HUD, RGB_HUI,_______,                       _______, RGB_SAD, RGB_SAI, RGB_VAD, RGB_VAI, _______, _______, \
-    _______, _______, BL_TOGG, BL_BRTG, BL_INC , BL_DEC ,_______,                       _______, VW_RGHT, VW_LFT , _______, _______, _______, _______, \
+    _______, _______, BL_TOGG, BL_BRTG, BL_INC , BL_DEC ,_______,                       _______, VW_LEFT, _______, _______, VW_RGHT, _______, _______, \
     _______, _______, _______, _______, _______, _______,_______,                       _______, _______, _______, _______, _______, _______, _______, \
     _______, _______, _______, _______,          _______,_______,_______,       _______,_______, _______,          _______, _______, _______, _______  \
   ),
@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_SP1ENT] = LAYOUT(
     _______, _______, _______, _______, _______, _______,_______,                       _______, _______, _______, _______, _______, _______, _______, \
     _______, RESET  , RGB_TOG, RGB_MOD, RGB_HUD, RGB_HUI,_______,                       _______, RGB_SAD, RGB_SAI, RGB_VAD, RGB_VAI, _______, _______, \
-    _______, _______, BL_TOGG, BL_BRTG, BL_INC , BL_DEC ,_______,                       _______, ALTLFT , _______, _______, ALTRGHT, _______, _______, \
+    _______, _______, BL_TOGG, BL_BRTG, BL_INC , BL_DEC ,_______,                       _______, ALTLEFT, _______, _______, ALTRGHT, _______, _______, \
     _______, _______, _______, _______, _______, _______,_______,                       _______, _______, _______, _______, _______, _______, _______, \
     _______, _______, _______, _______,          _______,_______,ALTRGHT,       _______,_______, _______,          _______, _______, _______, _______  \
   ),
